@@ -1,0 +1,35 @@
+@import "./_normalize";
+@font-face {
+  font-family: "Recoleta Regular";
+  src: url("../sources/fonts/Recoleta-Regular.eot");
+  src: url("../sources/fonts/Recoleta-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../sources/fonts/Recoleta-Regular.woff") format("woff"),
+    url("../sources/fonts/Recoleta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  width: 1440px;
+  height: 98px;
+  background-color: #163a24;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+.logo__header {
+  margin: 20px 0px 20px 130px;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 680px;
+}
+.actions__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 41px 24px 35px 0px;
+}
