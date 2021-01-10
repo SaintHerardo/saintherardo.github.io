@@ -1,3 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  display: block;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: bold;
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -212,56 +266,18 @@ template {
   display: none;
 }
 
-li {
-  list-style-type: none;
-}
-
-p {
-  display: block;
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
-  -webkit-margin-after: 0em;
-          margin-block-end: 0em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  margin-top: 0;
-  margin-bottom: 0rem;
-}
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-h4 {
-  display: block;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  font-weight: bold;
-}
-
 @font-face {
   font-family: "Recoleta Regular";
   src: url("../sources/fonts/Recoleta-Regular.eot");
   src: url("../sources/fonts/Recoleta-Regular.eot?#iefix") format("embedded-opentype"), url("../sources/fonts/Recoleta-Regular.woff") format("woff"), url("../sources/fonts/Recoleta-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../sources/fonts/NotoSans-hinted/NotoSans-Regular.ttf);
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -275,9 +291,6 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .logo__header {
@@ -291,6 +304,9 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 680px;
 }
 
@@ -301,6 +317,87 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 41px 24px 35px 0px;
+}
+
+.actions__item {
+  margin-right: 24px;
+  font-size: 16px;
+  font-family: "Noto Sans";
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  height: 52px;
+  background-color: #198c36;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 160px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.actions__btn {
+  width: 141px;
+}
+
+.header__content {
+  position: relative;
+  height: 544px;
+  width: 1440px;
+  background-color: #163a24;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-container {
+  height: 295px;
+  width: 475px;
+}
+
+.left-container--header-margin {
+  margin: 120px 23px 129px 130px;
+}
+
+.title {
+  font-size: 48px;
+  color: #fff;
+  font-family: "Recoleta Regular";
+  line-height: 54px;
+}
+
+.title-header {
+  width: 380px;
+  line-height: 66px;
+}
+
+.main-text {
+  font-family: "Noto Sans";
+  font-size: 18px;
+  color: #fff;
+  line-height: 27px;
+}
+
+.right-container {
+  height: 738px;
+  width: 1025px;
+}
+
+.header__img-figures {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 1025px;
+  max-height: 738px;
+}
+
+.features {
+  width: 1440px;
+  height: 1466px;
 }
 /*# sourceMappingURL=style.css.map */
