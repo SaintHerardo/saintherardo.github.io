@@ -82,7 +82,7 @@ h4 {
 }
 .link-btn {
   display: inline-block;
-  height: 52px;
+  height: auto;
   background-color: #198c36;
   font-family: "Noto Sans";
   font-size: 16px;
@@ -91,6 +91,7 @@ h4 {
   padding: 17px 25px;
   text-decoration: none;
   transition: 0.3s;
+  white-space: nowrap;
 }
 .btn:focus {
   outline: none;
@@ -122,6 +123,16 @@ h4 {
   width: 490px;
   height: 420px;
 }
+.logo__header {
+  object-fit: contain;
+  max-width: 100%;
+  width: 153px;
+  height: auto;
+  min-width: 105px;
+}
+.logo__link {
+  display: block;
+}
 
 /* Header */
 
@@ -129,55 +140,46 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
-  height: 642px;
   background-color: #163a24;
 }
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1180px;
-  // max-width: 100%;
+  max-width: 1180px;
+  width: 100%;
   height: 98px;
+  padding: 5px;
 }
 .header__content {
   display: flex;
   align-items: center;
   height: 544px;
-  // max-width: 100%;
-  width: 1180px;
+  width: 100%;
+  max-width: 1180px;
   background-color: #163a24;
 }
 .header__container {
-  // max-width: 100%;
-  width: 475px;
-  height: 295px;
-  margin-right: 22px;
+  max-width: 475px;
+  width: 100%;
+  height: auto;
+  margin-right: 12px;
+  padding: 10px;
 }
 .header__img {
   object-fit: contain;
-  max-width: 100%;
+  width: 100%;
+  max-width: 738px;
   height: auto;
-  width: 738px;
-  height: 580px;
 }
 .header__title {
-  max-width: 100%;
-  width: 391px;
   line-height: 66px;
 }
 .header__text {
-  max-width: 100%;
-  width: 475px;
+  width: 100%;
+  max-width: 475px;
   height: 81px;
   margin-top: 18px;
-}
-.logo__header {
-  object-fit: contain;
-  max-width: 100%;
-  width: 153px;
-  height: auto;
 }
 
 /* Actions section */
@@ -186,12 +188,15 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 341px;
+  width: 100%;
+  max-width: 341px;
 }
 .actions__list {
   display: flex;
   justify-content: space-between;
-  width: 176px;
+  width: 100%;
+  max-width: 176px;
+  white-space: nowrap;
 }
 .actions__item {
   font-size: 16px;
@@ -200,7 +205,8 @@ h4 {
   text-decoration: none;
 }
 .actions__btn {
-  width: 141px;
+  width: 100%;
+  max-width: 141px;
 }
 
 /* Features section */
@@ -415,7 +421,7 @@ h4 {
   align-items: center;
   width: 290px;
   height: 183px;
-  background-image: url(../sources/img/circles.png);
+  background-image: url(../sources/img/price/circles.png);
 }
 .price__background-text {
   width: 225px;
@@ -602,3 +608,4 @@ h4 {
   width: 403px;
   height: 19px;
 }
+@import "./media-queries";
