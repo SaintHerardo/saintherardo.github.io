@@ -1,4 +1,5 @@
 @import "./_normalize";
+@import "./vars";
 @font-face {
   font-family: "Recoleta Regular";
   src: url("../sources/fonts/Recoleta-Regular.eot");
@@ -33,36 +34,36 @@ h4 {
   font-size: 24px;
 }
 .title {
-  color: #fbfaf7;
+  color: $text-color;
   font-family: "Recoleta Medium";
   font-weight: bold;
 }
 .main-text {
   font-family: "Noto Sans";
   font-size: 18px;
-  color: #fbfaf7;
+  color: $text-color;
   line-height: 27px;
 }
 .text {
   font-family: "Noto Sans";
   font-size: 14px;
-  color: #fbfaf7;
+  color: $text-color;
   line-height: 21px;
 }
 .text--color {
-  color: #163a24;
+  color: $primary-color;
 }
 .main-text--color {
-  color: #163a24;
+  color: $primary-color;
 }
 .title--color {
-  color: #163a24;
+  color: $primary-color;
 }
 .link {
   font-family: "Noto Sans";
   font-size: 14px;
   font-weight: 400;
-  color: #198c36;
+  color: $btn-color;
   text-decoration: none;
 }
 .link:hover {
@@ -70,12 +71,12 @@ h4 {
 }
 .btn {
   height: 52px;
-  background-color: #198c36;
+  background-color: $btn-color;
   font-family: "Noto Sans";
   font-size: 16px;
   color: #fff;
   border: none;
-  border-radius: 160px;
+  border-radius: 20px;
   padding: 15px 25px;
   transition: 0.3s;
   cursor: pointer;
@@ -83,7 +84,7 @@ h4 {
 .link-btn {
   display: inline-block;
   height: auto;
-  background-color: #198c36;
+  background-color: $btn-color;
   font-family: "Noto Sans";
   font-size: 16px;
   color: #fff;
@@ -103,6 +104,7 @@ h4 {
 .text-img-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 990px;
 }
 .text-img-item {
@@ -116,19 +118,14 @@ h4 {
   margin-right: 115px;
 }
 .container-big-img {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
   height: 490px;
 }
 .container-small-img {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
   height: 420px;
-}
-.logo__header {
-  object-fit: contain;
-  max-width: 100%;
-  width: 153px;
-  height: auto;
-  min-width: 105px;
 }
 .logo__link {
   display: block;
@@ -140,7 +137,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #163a24;
+  background-color: $primary-color;
 }
 .header__top {
   display: flex;
@@ -151,18 +148,26 @@ h4 {
   height: 98px;
   padding: 5px;
 }
+.logo__header {
+  object-fit: contain;
+  width: 100%;
+  max-width: 153px;
+  height: auto;
+  min-width: 105px;
+}
 .header__content {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 544px;
   width: 100%;
   max-width: 1180px;
-  background-color: #163a24;
+  background-color: $primary-color;
 }
 .header__container {
   max-width: 475px;
   width: 100%;
-  height: auto;
+  height: 320px;
   margin-right: 12px;
   padding: 10px;
 }
@@ -174,11 +179,14 @@ h4 {
 }
 .header__title {
   line-height: 66px;
+  max-width: 391px;
+  width: 100%;
+  height: auto;
 }
 .header__text {
   width: 100%;
-  max-width: 475px;
-  height: 81px;
+  max-width: 375px;
+  height: auto;
   margin-top: 18px;
 }
 
@@ -223,7 +231,6 @@ h4 {
   margin-top: 120px;
 }
 .features__title {
-  width: 376px;
   margin-bottom: 27px;
   line-height: 54px;
 }
@@ -235,7 +242,8 @@ h4 {
   flex-direction: column;
   align-items: center;
   height: 415px;
-  width: 896px;
+  width: 100%;
+  max-width: 896px;
   margin: 0 auto;
 }
 .partner__title {
@@ -244,9 +252,20 @@ h4 {
 }
 .partners__container {
   display: flex;
-  width: 896px;
+  width: 100%;
+  max-width: 896px;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
+}
+.partners__logo {
+  width: 100%;
+  max-width: 110px;
+  height: 100%;
+}
+.partners__img {
+  width: 100%;
+  max-width: 110px;
 }
 
 /* Offers section */
@@ -257,23 +276,26 @@ h4 {
   align-items: center;
   width: 100%;
   height: 568px;
-  background-color: #163a24;
+  background-color: $primary-color;
 }
 .offers__title {
-  width: 825px;
   height: 60px;
   margin: 66px auto;
+  text-align: center;
 }
 .offers__container {
   display: flex;
   justify-content: space-around;
-  width: 1230px;
+  max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .offers__item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 .offers__img {
@@ -292,18 +314,23 @@ h4 {
   background-color: #f2efe6;
 }
 .employees__title {
-  width: 739px;
+  width: 100%;
+  max-width: 739px;
   margin: 114px auto 27px;
+  padding: 0 15px;
   text-align: center;
 }
 .employees__text {
-  width: 760px;
+  width: 100%;
+  max-width: 760px;
   text-align: center;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .employees__img {
-  width: 1180px;
-  height: 335px;
+  width: 100%;
+  max-width: 1180px;
+  height: auto;
 }
 
 /* Capabilities section */
@@ -323,6 +350,7 @@ h4 {
   margin-bottom: 27px;
 }
 .capabilities__title {
+  text-align: center;
   margin-top: 115px;
 }
 .capabilities__text {
@@ -331,26 +359,27 @@ h4 {
 .capabilities__cards-container {
   display: flex;
   justify-content: space-between;
-  width: 1139px;
+  width: 100%;
+  max-width: 1139px;
   height: 430px;
   margin-top: 18px;
 }
 
-/* Card section */
+/* Cards */
 
 .card {
   display: flex;
   width: 353px;
   height: 393px;
-  background-color: #fbfaf7;
+  background-color: $text-color;
   border-radius: 15px;
   box-shadow: 5px 5px 20px #e9e4d5;
 }
 .card--higher {
-  height: 430px;
+  max-height: 430px;
 }
 .card__inner {
-  width: 273px;
+  max-width: 273px;
   height: 293px;
   margin: 50px 40px;
 }
@@ -371,12 +400,12 @@ h4 {
   font-size: 16px;
   font-family: "Noto Sans";
   line-height: 22px;
-  color: #163a24;
+  color: $primary-color;
 }
 .card__text::before {
   content: "";
   position: absolute;
-  background-color: #163a24;
+  background-color: $primary-color;
   top: 7px;
   left: 6px;
   height: 8px;
@@ -395,21 +424,26 @@ h4 {
   background-color: #f2efe6;
 }
 .price__title {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   margin: 114px auto 26px;
+  text-align: center;
 }
 .price__text {
+  text-align: center;
+  padding: 0 15px;
   margin-bottom: 19px;
 }
 .price__container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 1125px;
+  width: 100%;
+  max-width: 1125px;
   height: 180px;
 }
 .price__item {
-  width: 260px;
+  max-width: 260px;
   text-align: center;
 }
 .price__item-title {
@@ -419,12 +453,14 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
   height: 183px;
   background-image: url(../sources/img/price/circles.png);
 }
 .price__background-text {
-  width: 225px;
+  width: 100%;
+  max-width: 225px;
   text-align: center;
   margin-top: 40px;
 }
@@ -434,6 +470,7 @@ h4 {
 .price__btn {
   margin-top: 5px;
   width: 244px;
+  margin-bottom: 15px;
 }
 
 /* Book section */
@@ -447,11 +484,11 @@ h4 {
   background-color: #fff;
 }
 .book__container {
-  margin-left: 228px;
   margin-top: 130px;
 }
 .book__img {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
   height: 490px;
 }
 .book__title {
@@ -461,7 +498,8 @@ h4 {
   margin-bottom: 19px;
 }
 .book__btn {
-  width: 191px;
+  width: 100%;
+  max-width: 191px;
 }
 
 /* Starting section */
@@ -471,7 +509,7 @@ h4 {
   justify-content: space-between;
   width: 100%;
   height: 415px;
-  background-color: #163a24;
+  background-color: $primary-color;
   overflow: hidden;
 }
 .starting__img-left {
@@ -480,7 +518,6 @@ h4 {
 }
 .starting__img-right {
   object-fit: contain;
-  position: relative;
   align-self: flex-end;
 }
 .starting__container {
@@ -494,10 +531,11 @@ h4 {
 }
 .starting__btn {
   background-color: #fab5a0;
-  color: #163a24;
+  color: $primary-color;
   font-weight: 600;
   margin-top: 18px;
-  width: 259px;
+  width: 100%;
+  max-width: 259px;
 }
 .starting__btn:hover {
   background-color: #af735f;
@@ -516,39 +554,53 @@ h4 {
 .subscriprion__container {
   display: flex;
   justify-content: space-between;
-  width: 1143px;
+  width: 100%;
+  max-width: 1143px;
   height: 107px;
-  margin: 60px 167px 73px 130px;
+  margin: 60px 0 130px;
 }
 .subscription__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.subscription__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 592px;
+}
 .subscription__form {
   position: relative;
-  width: 553px;
+  width: 100%;
+  max-width: 553px;
   height: 54px;
-  background-color: #fff;
-  border-radius: 255px;
   box-sizing: border-box;
 }
 .subscription__form-area {
-  width: 445px;
+  position: relative;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 525px;
   height: 54px;
-  margin: auto 20px;
   border: none;
   outline: none;
   font-family: "Noto Sans";
   font-size: 18px;
+  border-radius: 255px;
 }
 .subscription__form-button {
-  position: absolute;
-  width: 111px;
+  position: relative;
+  top: -53px;
+  left: 480px;
+  width: 100%;
+  max-width: 111px;
   background-color: #15762e;
 }
 .subscription__form-text {
-  width: 524px;
+  width: 100%;
+  max-width: 524px;
   height: 42px;
 }
 .subscription__link {
@@ -570,42 +622,45 @@ h4 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  width: 1180px;
+  max-width: 1180px;
   height: 123px;
 }
 .footer__title {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 242px;
+  width: 100%;
+  max-width: 242px;
   height: 42px;
+  text-align: center;
 }
 .footer__media {
   display: flex;
   justify-content: space-between;
-  width: 140px;
-  height: 25px;
+  width: 100%;
+  max-width: 140px;
+  height: auto;
 }
 .footer__hr {
   width: 100%;
-  width: 1180px;
+  max-width: 1180px;
   height: 1px;
   background-color: #f2efe6;
-  margin: 0 auto;
   border: none;
 }
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1180px;
+  width: 100%;
+  max-width: 1180px;
   height: 70px;
-  margin: 0px 130px;
 }
 .footer__container {
   display: flex;
   justify-content: space-between;
-  width: 403px;
+  width: 100%;
+  max-width: 403px;
   height: 19px;
 }
 @import "./media-queries";
